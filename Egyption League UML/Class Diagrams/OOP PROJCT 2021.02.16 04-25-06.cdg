@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="OOP PROJCT">
+  <ClassDiagramComponents>
+    <Class name="Admin" package="oop.project" visibility="public" xPosition="20.0" yPosition="851.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="league" type="League" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="ADD" returnType="void" visibility="public">
+          <Argument type="String" name="team_name"/>
+        </Method>
+        <Method name="ADD" returnType="void" visibility="public">
+          <Argument type="int" name="team_index"/>
+          <Argument type="String" name="player_name"/>
+          <Argument type="Position" name="postion"/>
+          <Argument type="float" name="player_height"/>
+          <Argument type="float" name="player_weight"/>
+        </Method>
+        <Method name="ADD" returnType="void" visibility="public">
+          <Argument type="String" name="time_match"/>
+          <Argument type="String" name="date_match"/>
+          <Argument type="int" name="referee_i"/>
+          <Argument type="int" name="stadium_i"/>
+          <Argument type="int" name="team_1_i"/>
+          <Argument type="int" name="team_2_i"/>
+        </Method>
+        <Method name="ADD" returnType="void" visibility="public">
+          <Argument type="int" name="seat_capacity"/>
+          <Argument type="String" name="location"/>
+          <Argument type="String" name="stadium_name"/>
+        </Method>
+        <Method name="ADD" returnType="void" visibility="public">
+          <Argument type="String" name="referee_name"/>
+          <Argument type="float" name="referee_height"/>
+          <Argument type="float" name="referee_weight"/>
+        </Method>
+        <Method name="EDIT" returnType="void" visibility="public">
+          <Argument type="int" name="index_team"/>
+          <Argument type="String" name="team_name"/>
+        </Method>
+        <Method name="EDIT" returnType="void" visibility="public">
+          <Argument type="int" name="index_player"/>
+          <Argument type="int" name="index_team"/>
+          <Argument type="String" name="player_name"/>
+          <Argument type="Position" name="postion"/>
+          <Argument type="float" name="player_height"/>
+          <Argument type="float" name="player_weight"/>
+        </Method>
+        <Method name="EDIT" returnType="void" visibility="public">
+          <Argument type="int" name="match_index"/>
+          <Argument type="String" name="time_match"/>
+          <Argument type="String" name="date_match"/>
+          <Argument type="int" name="referee_i"/>
+          <Argument type="int" name="stadium_i"/>
+          <Argument type="int" name="team_1_i"/>
+          <Argument type="int" name="team_2_i"/>
+        </Method>
+        <Method name="EDIT" returnType="void" visibility="public">
+          <Argument type="int" name="stadium_index"/>
+          <Argument type="int" name="seat_capacity"/>
+          <Argument type="String" name="location"/>
+          <Argument type="String" name="stadium_name"/>
+        </Method>
+        <Method name="EDIT" returnType="void" visibility="public">
+          <Argument type="int" name="referee_index"/>
+          <Argument type="float" name="referee_weight"/>
+          <Argument type="String" name="referee_name"/>
+          <Argument type="float" name="referee_height"/>
+        </Method>
+        <Method name="removeTeam" returnType="void" visibility="public">
+          <Argument type="int" name="index_team"/>
+        </Method>
+        <Method name="removePlayer" returnType="void" visibility="public">
+          <Argument type="int" name="team_index"/>
+          <Argument type="int" name="index_player"/>
+        </Method>
+        <Method name="removeMatch" returnType="void" visibility="public">
+          <Argument type="int" name="index_match"/>
+        </Method>
+        <Method name="removeStadium" returnType="void" visibility="public">
+          <Argument type="int" name="stadium_index"/>
+        </Method>
+        <Method name="removeReferee" returnType="void" visibility="public">
+          <Argument type="int" name="referee_index"/>
+        </Method>
+        <Method name="intial0_data0" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="adminAddFrame" package="oop.project" visibility="public" xPosition="1329.0" yPosition="851.0">
+      <Fields>
+        <Field name="add_player_button" type="JButton" visibility="package"/>
+        <Field name="team_index" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="player_name" type="JTextField" visibility="package"/>
+        <Field name="appostion" type="JComboBox&lt;Position&gt;" visibility="package"/>
+        <Field name="player_height" type="JTextField" visibility="package"/>
+        <Field name="player_weight" type="JTextField" visibility="package"/>
+        <Field name="team_index_l" type="JLabel" visibility="package"/>
+        <Field name="player_name_l" type="JLabel" visibility="package"/>
+        <Field name="postion_l" type="JLabel" visibility="package"/>
+        <Field name="player_height_l" type="JLabel" visibility="package"/>
+        <Field name="player_weight_l" type="JLabel" visibility="package"/>
+        <Field name="player_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="add_team_button" type="JButton" visibility="package"/>
+        <Field name="team_name" type="JTextField" visibility="package"/>
+        <Field name="team_name_l" type="JLabel" visibility="package"/>
+        <Field name="team_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="add_match_button" type="JButton" visibility="package"/>
+        <Field name="date_match" type="JTextField" visibility="package"/>
+        <Field name="time_match" type="JTextField" visibility="package"/>
+        <Field name="referee_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="stadium_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="team1_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="team2_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="date_match_l" type="JLabel" visibility="package"/>
+        <Field name="time_match_l" type="JLabel" visibility="package"/>
+        <Field name="referee_i_l" type="JLabel" visibility="package"/>
+        <Field name="stadium_i_l" type="JLabel" visibility="package"/>
+        <Field name="team1_i_l" type="JLabel" visibility="package"/>
+        <Field name="team2_i_l" type="JLabel" visibility="package"/>
+        <Field name="match_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="add_referee_button" type="JButton" visibility="package"/>
+        <Field name="referee_name" type="JTextField" visibility="package"/>
+        <Field name="referee_height" type="JTextField" visibility="package"/>
+        <Field name="referee_weight" type="JTextField" visibility="package"/>
+        <Field name="referee_name_l" type="JLabel" visibility="package"/>
+        <Field name="referee_height_l" type="JLabel" visibility="package"/>
+        <Field name="referee_weight_l" type="JLabel" visibility="package"/>
+        <Field name="referee_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="add_staduim_button" type="JButton" visibility="package"/>
+        <Field name="staduim_name" type="JTextField" visibility="package"/>
+        <Field name="staduim_capsity" type="JTextField" visibility="package"/>
+        <Field name="staduim_location" type="JTextField" visibility="package"/>
+        <Field name="staduim_name_l" type="JLabel" visibility="package"/>
+        <Field name="staduim_capsity_l" type="JLabel" visibility="package"/>
+        <Field name="staduim_location_l" type="JLabel" visibility="package"/>
+        <Field name="staduim_valid_inf" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="adminDeleteFrame" package="oop.project" visibility="public" xPosition="466.0" yPosition="1485.0">
+      <Fields>
+        <Field name="deleteButton1" type="JButton" visibility="package"/>
+        <Field name="deletePlayer_T_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deletePlayer_i" type="JTextField" visibility="package"/>
+        <Field name="deletePlyer_T_l" type="JLabel" visibility="package"/>
+        <Field name="deletePlayer_l" type="JLabel" visibility="package"/>
+        <Field name="deletePlayer_i_valid_info" type="JLabel" visibility="package"/>
+        <Field name="deleteButton2" type="JButton" visibility="package"/>
+        <Field name="deleteTeam_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deleteTeam_l" type="JLabel" visibility="package"/>
+        <Field name="deleteButton3" type="JButton" visibility="package"/>
+        <Field name="deleteMatch_i1" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deleteMatch_i2" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deleteMatch_l1" type="JLabel" visibility="package"/>
+        <Field name="deleteMatch_l2" type="JLabel" visibility="package"/>
+        <Field name="deleteButton4" type="JButton" visibility="package"/>
+        <Field name="deleteReferee_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deleteReferee_l" type="JLabel" visibility="package"/>
+        <Field name="deleteButton5" type="JButton" visibility="package"/>
+        <Field name="deleteStadium_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="deleteStadium_l" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="adminEditFrame" package="oop.project" visibility="public" xPosition="885.0" yPosition="851.0">
+      <Fields>
+        <Field name="editButton1" type="JButton" visibility="package"/>
+        <Field name="editPlayer_t_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editPlayer_i" type="JTextField" visibility="package"/>
+        <Field name="editPlayer_n" type="JTextField" visibility="package"/>
+        <Field name="editPlayer_pos" type="JComboBox&lt;Position&gt;" visibility="package"/>
+        <Field name="editPlayer_w" type="JTextField" visibility="package"/>
+        <Field name="editPlayer_h" type="JTextField" visibility="package"/>
+        <Field name="editPlayer_t_i_l" type="JLabel" visibility="package"/>
+        <Field name="editPlayer_i_l" type="JLabel" visibility="package"/>
+        <Field name="editPlayer_n_l" type="JLabel" visibility="package"/>
+        <Field name="editPlayer_pos_l" type="JLabel" visibility="package"/>
+        <Field name="editPlayer_w_l" type="JLabel" visibility="package"/>
+        <Field name="editPlayer_h_l" type="JLabel" visibility="package"/>
+        <Field name="player_edit_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="editButton2" type="JButton" visibility="package"/>
+        <Field name="editTeam_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editTeam_n" type="JTextField" visibility="package"/>
+        <Field name="editTeam_i_l" type="JLabel" visibility="package"/>
+        <Field name="editTeam_n_l" type="JLabel" visibility="package"/>
+        <Field name="team_edit_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="editButton3" type="JButton" visibility="package"/>
+        <Field name="editMatch_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editMatch_d" type="JTextField" visibility="package"/>
+        <Field name="editMatch_t" type="JTextField" visibility="package"/>
+        <Field name="editMatch_r_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editMatch_s_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editMatch_t1_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editMatch_t2_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editMatch_i_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_d_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_t_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_r_i_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_s_i_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_t1_i_l" type="JLabel" visibility="package"/>
+        <Field name="editMatch_t2_i_l" type="JLabel" visibility="package"/>
+        <Field name="match_edit_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="editButton4" type="JButton" visibility="package"/>
+        <Field name="editRef_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editRef_n" type="JTextField" visibility="package"/>
+        <Field name="editRef_h" type="JTextField" visibility="package"/>
+        <Field name="editRef_w" type="JTextField" visibility="package"/>
+        <Field name="editRef_i_l" type="JLabel" visibility="package"/>
+        <Field name="editRef_n_l" type="JLabel" visibility="package"/>
+        <Field name="editRef_h_l" type="JLabel" visibility="package"/>
+        <Field name="editRef_w_l" type="JLabel" visibility="package"/>
+        <Field name="referee_edit_valid_inf" type="JLabel" visibility="package"/>
+        <Field name="editButton5" type="JButton" visibility="package"/>
+        <Field name="editStd_i" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="editStd_n" type="JTextField" visibility="package"/>
+        <Field name="editStd_cap" type="JTextField" visibility="package"/>
+        <Field name="editStd_loc" type="JTextField" visibility="package"/>
+        <Field name="editStd_i_l" type="JLabel" visibility="package"/>
+        <Field name="editStd_n_l" type="JLabel" visibility="package"/>
+        <Field name="editStd_cap_l" type="JLabel" visibility="package"/>
+        <Field name="editStd_loc_l" type="JLabel" visibility="package"/>
+        <Field name="staduim_edit_valid_inf" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="adminFrame" package="oop.project" visibility="public" xPosition="1329.0" yPosition="681.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Frame" package="oop.project" visibility="public" xPosition="97.0" yPosition="1485.0">
+      <Fields>
+        <Field name="admin" type="Admin" visibility="package"/>
+        <Field name="PlayerSize" type="int" visibility="package"/>
+        <Field name="PlayerNumber" type="int" visibility="package"/>
+        <Field name="validlogin" type="boolean" visibility="package"/>
+        <Field name="RESOURCE" type="String" visibility="package"/>
+        <Field name="url" type="URL" visibility="package"/>
+        <Field name="MatchTablecolumns" type="String[]" visibility="package"/>
+        <Field name="MatchTabledata" type="Object[][]" visibility="package"/>
+        <Field name="HomePanel" type="JPanel" visibility="package"/>
+        <Field name="homeButton" type="JButton" visibility="package"/>
+        <Field name="AisPlayer" type="JRadioButton" visibility="package"/>
+        <Field name="addBG" type="ButtonGroup" visibility="package"/>
+        <Field name="mainImage" type="ImageIcon" visibility="package"/>
+        <Field name="mainJLabelImage" type="JLabel" visibility="package"/>
+        <Field name="showMatchPane" type="JScrollPane" visibility="package"/>
+        <Field name="MatchTableModel" type="DefaultTableModel" visibility="package"/>
+        <Field name="MatchTable" type="JTable" visibility="package"/>
+        <Field name="userName" type="JTextField" visibility="package"/>
+        <Field name="password" type="JPasswordField" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="League" package="oop.project" visibility="public" xPosition="562.0" yPosition="491.0">
+      <Fields>
+        <Field name="startDate" type="String" visibility="private"/>
+        <Field name="endDate" type="String" visibility="private"/>
+        <Field name="matchList" type="ArrayList&lt;Match&gt;" visibility="public"/>
+        <Field name="teamList" type="ArrayList&lt;Team&gt;" visibility="public"/>
+        <Field name="refList" type="ArrayList&lt;Referee&gt;" visibility="public"/>
+        <Field name="stdList" type="ArrayList&lt;Stadium&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="startDate"/>
+          <Argument type="String" name="endDate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getStartDate" returnType="String" visibility="public"/>
+        <Method name="setStartDate" returnType="void" visibility="public">
+          <Argument type="String" name="startDate"/>
+        </Method>
+        <Method name="getEndDate" returnType="String" visibility="public"/>
+        <Method name="setEndDate" returnType="void" visibility="public">
+          <Argument type="String" name="endDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Match" package="oop.project" visibility="public" xPosition="20.0" yPosition="27.0">
+      <Fields>
+        <Field name="time" type="String" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="stadium" type="Stadium" visibility="public"/>
+        <Field name="team1" type="Team" visibility="public"/>
+        <Field name="team2" type="Team" visibility="public"/>
+        <Field name="referee" type="Referee" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="time"/>
+          <Argument type="String" name="date"/>
+          <Argument type="Stadium" name="stadium"/>
+          <Argument type="Team" name="team1"/>
+          <Argument type="Team" name="team2"/>
+          <Argument type="Referee" name="referee"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTime" returnType="String" visibility="public"/>
+        <Method name="setTime" returnType="void" visibility="public">
+          <Argument type="String" name="time"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="setRef" returnType="void" visibility="public">
+          <Argument type="Referee" name="r"/>
+        </Method>
+        <Method name="setStadium" returnType="void" visibility="public">
+          <Argument type="Stadium" name="s"/>
+        </Method>
+        <Method name="setTeam1" returnType="void" visibility="public">
+          <Argument type="Team" name="t"/>
+        </Method>
+        <Method name="setTeam2" returnType="void" visibility="public">
+          <Argument type="Team" name="t"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OOPProject" package="oop.project" visibility="public" xPosition="1367.0" yPosition="542.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Person" package="oop.project" visibility="public" isAbstract="true" xPosition="1277.0" yPosition="27.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="height" type="float" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="height"/>
+          <Argument type="float" name="weight"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getHeight" returnType="float" visibility="public"/>
+        <Method name="setHeight" returnType="void" visibility="public">
+          <Argument type="float" name="height"/>
+        </Method>
+        <Method name="getWeight" returnType="float" visibility="public"/>
+        <Method name="setWeight" returnType="void" visibility="public">
+          <Argument type="float" name="weight"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Player" package="oop.project" visibility="public" xPosition="1185.0" yPosition="366.0">
+      <Fields>
+        <Field name="position" type="Position" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="height"/>
+          <Argument type="float" name="weight"/>
+          <Argument type="Position" name="position"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Referee" package="oop.project" visibility="public" xPosition="684.0" yPosition="27.0">
+      <Fields>
+        <Field name="refMatches" type="ArrayList&lt;Match&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="height"/>
+          <Argument type="float" name="weight"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMacthes" returnType="ArrayList&lt;Match&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Match&gt;" name="list"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Stadium" package="oop.project" visibility="public" xPosition="20.0" yPosition="480.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="location" type="String" visibility="private"/>
+        <Field name="seating" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="location"/>
+          <Argument type="int" name="seating"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatches" returnType="ArrayList&lt;Match&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Match&gt;" name="list"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getLocation" returnType="String" visibility="public"/>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="String" name="location"/>
+        </Method>
+        <Method name="getSeating" returnType="int" visibility="public"/>
+        <Method name="setSeating" returnType="void" visibility="public">
+          <Argument type="int" name="seating"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Team" package="oop.project" visibility="public" xPosition="819.0" yPosition="231.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="playerList" type="ArrayList&lt;Player&gt;" visibility="public"/>
+        <Field name="teamMatches" type="ArrayList&lt;Match&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatches" returnType="ArrayList&lt;Match&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Match&gt;" name="list"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Position" package="oop.project" visibility="public" xPosition="997.0" yPosition="495.0">
+      <Literals>
+        <Literal name="GK"/>
+        <Literal name="CB"/>
+        <Literal name="LB"/>
+        <Literal name="RB"/>
+        <Literal name="DMF"/>
+        <Literal name="CMF"/>
+        <Literal name="AMF"/>
+        <Literal name="SS"/>
+        <Literal name="RW"/>
+        <Literal name="LW"/>
+        <Literal name="FC"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="playerList" source="oop.project.Team" target="oop.project.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Player&gt;"/>
+    <HasRelation name="team2" source="oop.project.Match" target="oop.project.Team" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="team1" source="oop.project.Match" target="oop.project.Team" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="matchList" source="oop.project.League" target="oop.project.Match" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Match&gt;"/>
+    <HasRelation name="editPlayer_pos" source="oop.project.adminEditFrame" target="oop.project.Position" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="oop.project.Match" target="oop.project.Referee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="oop.project.adminEditFrame" target="oop.project.adminDeleteFrame"/>
+    <IsRelation name="is" source="oop.project.adminDeleteFrame" target="oop.project.Frame"/>
+    <HasRelation name="stdList" source="oop.project.League" target="oop.project.Stadium" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Stadium&gt;"/>
+    <UseRelation source="oop.project.Match" target="oop.project.Team" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="refList" source="oop.project.League" target="oop.project.Referee" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Referee&gt;"/>
+    <HasRelation name="admin" source="oop.project.Frame" target="oop.project.Admin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="position" source="oop.project.Player" target="oop.project.Position" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="teamMatches" source="oop.project.Team" target="oop.project.Match" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Match&gt;"/>
+    <UseRelation source="oop.project.Referee" target="oop.project.Match" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stadium" source="oop.project.Match" target="oop.project.Stadium" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="oop.project.Match" target="oop.project.Stadium" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="oop.project.Player" target="oop.project.Person"/>
+    <HasRelation name="league" source="oop.project.Admin" target="oop.project.League" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="refMatches" source="oop.project.Referee" target="oop.project.Match" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Match&gt;"/>
+    <IsRelation name="is" source="oop.project.Referee" target="oop.project.Person"/>
+    <HasRelation name="referee" source="oop.project.Match" target="oop.project.Referee" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="appostion" source="oop.project.adminAddFrame" target="oop.project.Position" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="oop.project.Team" target="oop.project.Match" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="teamList" source="oop.project.League" target="oop.project.Team" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Team&gt;"/>
+    <UseRelation source="oop.project.Stadium" target="oop.project.Match" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="oop.project.Admin" target="oop.project.Position" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="oop.project.adminAddFrame" target="oop.project.adminEditFrame"/>
+    <IsRelation name="is" source="oop.project.adminFrame" target="oop.project.adminAddFrame"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
